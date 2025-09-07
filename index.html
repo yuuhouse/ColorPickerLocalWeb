@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="color-picker-container">
+    <div class="color-wheel">
+      <canvas id="color-ring" width="500" height="500"></canvas>
+      <div class="triangle">
+        <canvas id="color-triangle" width="280" height="280"></canvas>
+      </div>
+    </div>
+    <div class="color-controls">
+      <label for="color-display">Selected Color:</label>
+      <input type="text" id="color-display" readonly />
+      <div class="color-preview"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

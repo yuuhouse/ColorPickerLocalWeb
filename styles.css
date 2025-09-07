@@ -1,0 +1,78 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #333;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.color-picker-container {
+  text-align: center;
+}
+
+.color-wheel {
+  position: relative;
+  width: 500px; /* 從 400px 增加到 500px */
+  height: 500px; /* 從 400px 增加到 500px */
+  margin: auto;
+  z-index: 1; /* 確保色相環在下層 */
+  pointer-events: auto; /* 確保 .color-wheel 能夠接收指標事件，且沒有其他元素覆蓋 */
+}
+
+#hue-slider {
+  width: 100%;
+  position: absolute;
+  top: -20px;
+    left: +28px;
+  display: none;
+}
+
+#color-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px; /* 從 400px 增加到 500px */
+  height: 500px; /* 從 400px 增加到 500px */
+  /* 移除 padding，使用內部繪製來控制厚度 */
+  padding: 0;
+  pointer-events: auto; /* 確保可以接收鼠標事件 */
+}
+
+.triangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px; /* 將寬度從 240px 恢復到 280px */
+  height: 280px; /* 將高度從 240px 恢復到 280px */
+  transform: translate(-50%, -50%);
+  z-index: 2; /* 確保色三角形在上層 */
+  pointer-events: auto; /* 恢復 .triangle 容器接收指標事件，允許點擊事件進入 */
+}
+
+.triangle canvas {
+  pointer-events: auto; /* 恢復 .triangle canvas 接收指標事件，允許點擊事件進入 */
+}
+
+.color-controls {
+  margin-top: 20px;
+}
+
+#color-display {
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border: none;
+  width: 200px;
+  font-size: 1.2em;
+}
+
+.color-preview {
+  width: 50px;
+  height: 50px;
+  background: white;
+  margin: 10px auto;
+  border: 1px solid black;
+}
